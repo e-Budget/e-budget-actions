@@ -23,4 +23,4 @@ runs:
       with:
         push: true
         tags: leojgpereira/e-budget-be:latest
-        file: src/main/docker/Dockerfile.jvm
+        file: e-budget-be/src/main/docker/Dockerfile.jvm
