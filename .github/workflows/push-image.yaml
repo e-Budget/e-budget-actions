@@ -1,0 +1,13 @@
+name: Build and Push
+on: workflow_dispatch
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: "e-Budget/e-budget-be"
+      - uses: e-Budget/e-budget-actions/.github/actions/push-image@main
+        with:
+          dockerhubUser: ${{ vars.DOCKERHUB_USERNAME }}
+          dockerhubToken: ${{ secrets.DOCKERHUB_TOKEN }}
