@@ -1,0 +1,8 @@
+name: Package
+description: Package e-Budget BE
+runs:
+  using: composite
+  steps:
+    - name: Build Quarkus Project
+      run: cd e-budget-be && mvn clean package
+      shell: bash
