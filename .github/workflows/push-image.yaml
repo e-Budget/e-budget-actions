@@ -7,6 +7,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: "e-Budget/e-budget-be"
+      - uses: e-Budget/e-budget-actions/.github/actions/setup@main
       - uses: e-Budget/e-budget-actions/.github/actions/push-image@main
         with:
           dockerhubUser: ${{ vars.DOCKERHUB_USERNAME }}
