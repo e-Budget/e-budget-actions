@@ -1,0 +1,11 @@
+name: Build e-Budget FE
+description: Build e-Budget FE with NPM
+runs:
+  using: composite
+  steps:
+    - name: Install e-Budget FE dependencies
+      run: npm install
+      shell: bash
+    - name: Build e-Budget FE
+      run: npm run build
+      shell: bash
