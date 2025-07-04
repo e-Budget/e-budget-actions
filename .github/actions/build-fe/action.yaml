@@ -6,6 +6,9 @@ runs:
     - name: Install e-Budget FE dependencies
       run: npm install
       shell: bash
+    - name: Run e-Budget FE Tests
+      run: npm run test
+      shell: bash
     - name: Build e-Budget FE
       run: npm run build
       shell: bash
