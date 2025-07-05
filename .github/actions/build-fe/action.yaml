@@ -3,11 +3,14 @@ description: Build e-Budget FE with NPM
 runs:
   using: composite
   steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 22
     - name: Install e-Budget FE dependencies
       run: npm install
       shell: bash
     - name: Run e-Budget FE Tests
-      run: npm run test
+      run: npm run test -- --coverage
       shell: bash
     - name: Build e-Budget FE
       run: npm run build
